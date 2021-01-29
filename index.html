@@ -78,8 +78,10 @@
             var x = document.getElementById("myLinks");
             if (x.style.display === "block") {
                 x.style.display = "none";
-                document.querySelector("main").style.display = "block";
-                document.querySelector("footer").style.display = "block";
+               setTimeout(() => {
+                    document.querySelector("main").style.display = "block";
+                    document.querySelector("footer").style.display = "block";
+                }, 600);
                 document.getElementById("myLinks").style.display = "none";
                 document.querySelector(".contain").style.display = "none";
                 document.querySelector(".tg_line1").style.cssText = " rotate(0deg);transition:0.5s;";
