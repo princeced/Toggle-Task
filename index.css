@@ -1,0 +1,141 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: rgb(50, 101, 134);
+    font-family: sans-serif;
+}
+
+.heading {
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
+}
+
+.hd_brand {
+    text-transform: uppercase;
+    color: #ccc;
+    letter-spacing: 1.7px;
+    padding-left: 50px;
+    font-size: 35px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.toogle {
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+    width: 55px;
+    z-index: 1;
+    margin-top: 40px;
+}
+
+.tg_line1 {
+    height: 7px;
+    background-color: #ccc;
+    margin: 7px 0;
+    border-radius: 25px;
+}
+
+.tg_line2 {
+    height: 7px;
+    background-color: #ccc;
+    margin: 7px 0;
+    border-radius: 25px;
+}
+
+.tg_line3 {
+    height: 7px;
+    background-color: #ccc;
+    margin: 7px 0;
+    border-radius: 25px;
+}
+
+.contain {
+    width: 0%;
+    display: none;
+    position: fixed;
+    left: 30%;
+    text-align: center;
+    height: 100vh;
+    margin: auto;
+}
+
+#myLinks {
+    display: none;
+    height: auto;
+    position: relative;
+}
+
+#myLinks>ul>li {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+#myLinks>ul>li>a {
+    font-size: 30px;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 20vh;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.left_div {
+    width: 0%;
+    float: left;
+    background-color: hotpink;
+    height: 100vh;
+}
+
+.right_div {
+    width: 0%;
+    float: right;
+    background-color: hotpink;
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+    margin: auto;
+}
+
+.para>h2 {
+    text-transform: uppercase;
+    color: #ccc;
+    letter-spacing: 1.7px;
+    margin-top: 100px;
+}
+
+.para {
+    width: 99%;
+    padding: 40px;
+}
+
+.para>p {
+    color: #ccc;
+    letter-spacing: 1.7px;
+    font-size: 20px;
+    width: 95%;
+}
+
+footer {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer>p {
+    margin-top: 20px;
+    color: #ccc;
+    letter-spacing: 1.7px;
+    margin-bottom: 20px;
+}

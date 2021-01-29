@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Task</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div>
+        <header>
+            <nav id="nav">
+                <div clsss="heading">
+                    <h1 class="hd_brand">BRANDING</h1>
+                </div>
+                <div class="toogle">
+                    <div class="tg_line1"></div>
+                    <div class="tg_line2"></div>
+                    <div class="tg_line3"></div>
+                </div>
+
+
+            </nav>
+
+            <div class="left_div"></div>
+            <div class="contain">
+                <div id="myLinks">
+                    <ul>
+                        <li><a href="">DEMO REEL</a></li>
+                        <li><a href="">FACES</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="right_div"></div>
+
+
+        </header>
+
+
+        <main>
+            <div class="para">
+                <h2>ABOUT</h2>
+                <p>
+                    Woot! Got the (vanilla) Javascript to work! <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum labore cumque, laborum, dolorem dolor doloribus iste qui omnis? Consequuntur sapiente mollitia iure quas. Rem nobis tenetur,
+                    est accusamus iste dolor, necessitatibus, facilis error ratione aliquid sequi voluptates dignissimos. Quidem, quam, rem? Molestias odio, perferendis dolores doloremque eum quo mollitia atque, sit inventore nisi accusamus magnam vitae
+                    temporibus maxime et in aliquam qui aliquid obcaecati alias unde repellat laudantium quam blanditiis. Blanditiis, earum itaque veritatis et numquam culpa, tempore magnam. Quas laborum voluptate id vero. Voluptatibus! Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Itaque nemo reprehenderit nostrum nesciunt, deleniti facere voluptas eligendi expedita dolor at praesentium sequi. Accusamus vitae ut necessitatibus aut, repudiandae voluptate! Excepturi quam
+                    explicabo quis illo, qui a ipsam sit atque non sed doloribus maiores in quo ut voluptatem neque animi, saepe facilis nemo et! Temporibus dolores deserunt illo cum aut saepe tenetur, odit velit ipsum beatae dolore illum accusantium
+                    alias ullam quas reiciendis! Quod at tenetur sint. Dolorum officia excepturi placeat, facere enim ullam, tempora accusantium culpa voluptates iusto non aperiam beatae ut laboriosam voluptatibus eum corrupti libero, laborum voluptas
+                    quasi at fugiat et vel? Eum.
+                </p>
+            </div>
+        </main>
+
+
+
+        <footer>
+            <p>©2018 A. JAMES LIPTAK</p>
+        </footer>
+
+    </div>
+
+
+    <script>
+        let pos = 0;
+
+        let leftcont = document.querySelector(".left_div");
+        let rightcont = document.querySelector(".right_div");
+        let elem = document.getElementById("myLinks");
+
+        document.querySelector(".toogle").addEventListener('click', () => {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                document.querySelector("main").style.display = "block";
+                document.querySelector("footer").style.display = "block";
+                document.getElementById("myLinks").style.display = "none";
+                document.querySelector(".contain").style.display = "none";
+                document.querySelector(".tg_line1").style.cssText = " rotate(0deg);transition:0.5s;";
+                document.querySelector(".tg_line2").style.cssText = " rotate(0deg);transition:0.5s;";
+                document.querySelector(".tg_line3").style.visibility = "visible";
+                document.querySelector(".left_div").style.width = "0%";
+                document.querySelector(".right_div").style.width = "0%";
+
+
+
+
+            } else {
+                x.style.display = "block";
+
+                document.querySelector(".contain").style.display = "block";
+                document.querySelector("main").style.display = "none";
+                document.querySelector("footer").style.display = "none";
+                document.getElementById("myLinks").style.display = "block";
+                document.querySelector(".tg_line3").style.visibility = "hidden";
+                document.querySelector(".tg_line1").style.cssText = "transform:translate(-0 ,15px) rotate(40deg);transform-origin:30%;transition:0.5s;";
+                document.querySelector(".tg_line2").style.cssText = "transform:translate(-0 ,15px) rotate(-40deg);transform-origin:30%;transition:0.5s;";
+
+                document.querySelector(".left_div").style.cssText = "transition:width 1s";
+                document.querySelector(".right_div").style.cssText = "transition:width 1s";
+
+
+                document.querySelector(".left_div").style.width = "30%";
+
+                document.querySelector(".right_div").style.width = "30%";
+
+                document.querySelector(".contain").style.width = "40%";
+
+                var id = setInterval(frame, 100);
+
+                function frame() {
+                    if (pos == 350) {
+                        clearInterval(id);
+                    } else {
+                        elem.style.top = 40 + "vh";
+
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
